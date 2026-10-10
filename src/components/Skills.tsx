@@ -1,4 +1,4 @@
-import { createElement, useEffect, useMemo, useState } from 'react';
+import { createElement, useEffect, useMemo, useRef, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { Canvas } from '@react-three/fiber';
 import { Float, OrbitControls, Billboard } from '@react-three/drei';
@@ -31,9 +31,29 @@ const skillsData: Skill[] = [
   { name: 'HTML5', color: '#E34F26', position: [3, -3.5, 0], icon: SiHtml5 },
 ];
 
+// Géométrie partagée par les 9 boules (créée une seule fois, 16x16 au lieu de 32x32)
+const sphereGeometry = new THREE.SphereGeometry(1, 16, 16);
+
+// Renvoie true quand l'élément est (presque) à l'écran
+function useInView<T extends Element>(rootMargin = '100px') {
+  const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [rootMargin]);
+  return [ref, inView] as const;
+}
+
 // Transforme une icône React en texture Three.js (SVG blanc -> image)
 function useIconTexture(Icon: IconType) {
-  return useMemo(() => {
+  const texture = useMemo(() => {
     let svg = renderToStaticMarkup(
       createElement(Icon, { size: 256, style: { color: '#ffffff' } })
     );
@@ -41,10 +61,16 @@ function useIconTexture(Icon: IconType) {
       svg = svg.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
     }
     const url = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-    const texture = new THREE.TextureLoader().load(url);
-    texture.colorSpace = THREE.SRGBColorSpace;
-    return texture;
+    const t = new THREE.TextureLoader().load(url);
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.generateMipmaps = false;
+    t.minFilter = THREE.LinearFilter;
+    return t;
   }, [Icon]);
+
+  // Libère la mémoire GPU au démontage
+  useEffect(() => () => texture.dispose(), [texture]);
+  return texture;
 }
 
 // Suit le mode sombre (classe "dark" sur <html>) pour adapter la couleur des languettes
@@ -62,7 +88,7 @@ function useIsDark() {
 
 // Dessine la languette (pastille + nom) sur un canvas -> texture Three.js
 function useLabelTexture(name: string, dark: boolean) {
-  return useMemo(() => {
+  const result = useMemo(() => {
     const font = 'bold 44px system-ui, -apple-system, "Segoe UI", Arial, sans-serif';
     const measure = document.createElement('canvas').getContext('2d')!;
     measure.font = font;
@@ -88,8 +114,14 @@ function useLabelTexture(name: string, dark: boolean) {
 
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
+    texture.generateMipmaps = false;
+    texture.minFilter = THREE.LinearFilter;
     return { texture, aspect: width / height };
   }, [name, dark]);
+
+  // Libère l'ancienne texture quand le thème change, et au démontage
+  useEffect(() => () => result.texture.dispose(), [result]);
+  return result;
 }
 
 function SkillBall({ skill }: { skill: Skill }) {
@@ -100,8 +132,7 @@ function SkillBall({ skill }: { skill: Skill }) {
   return (
     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={1.5}>
       <group position={skill.position}>
-        <mesh castShadow receiveShadow>
-          <sphereGeometry args={[1, 32, 32]} />
+        <mesh geometry={sphereGeometry}>
           <meshStandardMaterial
             color={skill.color}
             roughness={0.2}
@@ -143,6 +174,7 @@ function SkillBall({ skill }: { skill: Skill }) {
 
 export default function Skills() {
   const { t } = useLanguage();
+  const [canvasRef, inView] = useInView<HTMLDivElement>('100px');
 
   return (
     <section id='skills' className='min-h-screen py-24 flex flex-col items-center relative bg-transparent'>
@@ -153,17 +185,20 @@ export default function Skills() {
         </p>
       </div>
 
-      <div className='w-full h-[600px] cursor-grab active:cursor-grabbing relative z-0'>
-        <Canvas shadows camera={{ position: [0, 0, 15], fov: 50 }}>
+      <div ref={canvasRef} className='w-full h-[600px] cursor-grab active:cursor-grabbing relative z-0'>
+        <Canvas
+          frameloop={inView ? 'always' : 'never'}
+          dpr={[1, 1.5]}
+          gl={{ antialias: true, powerPreference: 'high-performance' }}
+          camera={{ position: [0, 0, 15], fov: 50 }}
+        >
           <ambientLight intensity={1} />
-          <directionalLight position={[10, 10, 5]} intensity={3} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
+          <directionalLight position={[10, 10, 5]} intensity={3} />
           <pointLight position={[-10, -10, -5]} intensity={1} color="#ff9999" />
 
-          <group rotation={[0, 0, 0]}>
-            {skillsData.map((skill) => (
-              <SkillBall key={skill.name} skill={skill} />
-            ))}
-          </group>
+          {skillsData.map((skill) => (
+            <SkillBall key={skill.name} skill={skill} />
+          ))}
 
           <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.4} enablePan={false} />
         </Canvas>
