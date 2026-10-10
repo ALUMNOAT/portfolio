@@ -124,7 +124,7 @@ const translations: Translations = {
       {
         title: 'Application CRUD (Projet d\'Intégration au Développement) (feuille de route)',
         description: 'Création d\'un site web de réservation de billets de théâtre en utilisant Spring Boot comme backend et Angular.js comme frontend. Projet non encore commencé, il sera détaillé ultérieurement.',
-        status: 'upcoming',
+        status: 'in-progress',
         tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
@@ -174,7 +174,7 @@ const translations: Translations = {
       {
         title: 'CRUD Application (Development Integration Project) (roadmap)',
         description: 'Creating a theater ticket booking website using Spring Boot as backend and Angular.js as frontend. Project not started yet, so it will be detailed later.',
-        status: 'upcoming',
+        status: 'in-progress',
         tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
@@ -224,7 +224,7 @@ const translations: Translations = {
       {
         title: 'CRUD-applicatie (Ontwikkelingsintegratieproject) (roadmap)',
         description: 'Het bouwen van een website voor het boeken van theatertickets met Spring Boot als backend en Angular.js als frontend. Nog niet gestart, wordt later gedetailleerd.',
-        status: 'upcoming',
+        status: 'in-progress',
         tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
@@ -274,7 +274,7 @@ const translations: Translations = {
       {
         title: 'Aplikacja CRUD (Projekt Integracji Rozwoju) (roadmap)',
         description: 'Tworzenie strony internetowej do rezerwacji biletów do teatru przy użyciu Spring Boot jako backendu i Angular.js jako frontend. Projekt jeszcze się nie zaczął, więc zostanie szczegółowo opisany później.',
-        status: 'upcoming',
+        status: 'in-progress',
         tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
