@@ -66,6 +66,7 @@ const translations: Translations = {
   },
   heroViewProjects: { fr: 'Voir les projets', en: 'View Projects', nl: 'Bekijk projecten', pl: 'Zobacz projekty' },
   heroResume: { fr: 'CV', en: 'Resume', nl: 'CV', pl: 'CV' },
+  heroFlipCard: { fr: 'Retourner la carte', en: 'Flip the card', nl: 'Draai de kaart om', pl: 'Odwróć kartę' },
 
   // About
   aboutTitle: { fr: 'Sur Moi', en: 'About Me', nl: 'Over Mij', pl: 'O mnie' },
@@ -341,6 +342,7 @@ const translations: Translations = {
   },
   contactButton: { fr: 'Dis Bonjour', en: 'Say Hello', nl: 'Zeg Hallo', pl: 'Przywitaj się' },
 
+  // TODO: remplacer l'exemple par ma vraie expérience
   // Experience Title
   experienceTitle: { fr: 'Expérience Professionnelle', en: 'Professional Experience', nl: 'Professionele Ervaring', pl: 'Doświadczenie Zawodowe' },
 
