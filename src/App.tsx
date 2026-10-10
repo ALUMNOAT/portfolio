@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import { LanguageProvider } from './context/LanguageContext';
 import LanguageSelector from './components/LanguageSelector';
 import Timeline from './components/Timeline';
+import Experience from './components/Experience';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
@@ -31,6 +32,7 @@ export default function App() {
           <Hero />
           <About />
           <Timeline />
+          <Experience />
           <Skills />
           <Projects />
           <Contact />

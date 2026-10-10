@@ -1,6 +1,7 @@
 import { createElement, useEffect, useMemo, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useThree } from '@react-three/fiber';
 import { Float, OrbitControls, Billboard } from '@react-three/drei';
 import * as THREE from 'three';
 import { FaJava } from 'react-icons/fa';
@@ -31,8 +32,24 @@ const skillsData: Skill[] = [
   { name: 'HTML5', color: '#E34F26', position: [3, -3.5, 0], icon: SiHtml5 },
 ];
 
+// Taille (en unités 3D) que la grille doit pouvoir occuper à l'écran,
+// avec une petite marge pour les languettes et le flottement des boules
+const CONTENT_WIDTH = 9.5;
+const CONTENT_HEIGHT = 11.5;
+
 // Géométrie partagée par les 9 boules (créée une seule fois, 16x16 au lieu de 32x32)
 const sphereGeometry = new THREE.SphereGeometry(1, 16, 16);
+
+// Réduit la scène quand l'écran est trop petit (jamais d'agrandissement : max 1)
+function ResponsiveGroup({ children }: { children: ReactNode }) {
+  const viewport = useThree((state) => state.viewport);
+  const scale = Math.min(
+    1,
+    viewport.width / CONTENT_WIDTH,
+    viewport.height / CONTENT_HEIGHT
+  );
+  return <group scale={scale}>{children}</group>;
+}
 
 // Renvoie true quand l'élément est (presque) à l'écran
 function useInView<T extends Element>(rootMargin = '100px') {
@@ -185,7 +202,7 @@ export default function Skills() {
         </p>
       </div>
 
-      <div ref={canvasRef} className='w-full h-[600px] cursor-grab active:cursor-grabbing relative z-0'>
+      <div ref={canvasRef} className='w-full h-[480px] sm:h-[600px] cursor-grab active:cursor-grabbing relative z-0'>
         <Canvas
           frameloop={inView ? 'always' : 'never'}
           dpr={[1, 1.5]}
@@ -196,9 +213,11 @@ export default function Skills() {
           <directionalLight position={[10, 10, 5]} intensity={3} />
           <pointLight position={[-10, -10, -5]} intensity={1} color="#ff9999" />
 
-          {skillsData.map((skill) => (
-            <SkillBall key={skill.name} skill={skill} />
-          ))}
+          <ResponsiveGroup>
+            {skillsData.map((skill) => (
+              <SkillBall key={skill.name} skill={skill} />
+            ))}
+          </ResponsiveGroup>
 
           <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.4} enablePan={false} />
         </Canvas>

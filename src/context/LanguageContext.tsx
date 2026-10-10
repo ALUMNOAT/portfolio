@@ -23,9 +23,19 @@ interface ParcoursTranslation {
   tech?: string[];
 }
 
+interface ExperienceTranslation {
+  role: string;
+  company: string;
+  period: string;
+  location?: string;
+  description?: string;
+  bullets: string[];
+  tech?: string[];
+}
+
 interface Translations {
   [key: string]: {
-    [lang in Language]: string | ProjectTranslation[] | ParcoursTranslation[];
+    [lang in Language]: string | ProjectTranslation[] | ParcoursTranslation[] | ExperienceTranslation[];
   };
 }
 
@@ -35,7 +45,8 @@ const translations: Translations = {
   navAbout: { fr: 'À propos', en: 'About', nl: 'Over mij', pl: 'O mnie' },
   navSkills: { fr: 'Compétences', en: 'Skills', nl: 'Vaardigheden', pl: 'Umiejętności' },
   navProjects: { fr: 'Projets', en: 'Projects', nl: 'Projecten', pl: 'Projekty' },
-  navParcours: { fr: 'Parcours', en: 'Experience', nl: 'Ervaring', pl: 'Doświadczenie' },
+  navParcours: { fr: 'Parcours', en: 'Education', nl: 'Opleiding', pl: 'Edukacja' },
+  navExperience: { fr: 'Expérience', en: 'Experience', nl: 'Ervaring', pl: 'Doświadczenie' },
   navContact: { fr: 'Contact', en: 'Contact', nl: 'Contact', pl: 'Kontakt' },
 
   // Hero
@@ -328,7 +339,74 @@ const translations: Translations = {
     nl: 'Mijn mailbox staat altijd open. Of je nu een vraag hebt of gewoon gedag wilt zeggen, ik reageer snel!',
     pl: 'Moja skrzynka odbiorcza jest zawsze otwarta. Niezależnie od tego, czy masz pytanie, czy po prostu chcesz się przywitać, odezwę się!'
   },
-  contactButton: { fr: 'Dis Bonjour', en: 'Say Hello', nl: 'Zeg Hallo', pl: 'Przywitaj się' }
+  contactButton: { fr: 'Dis Bonjour', en: 'Say Hello', nl: 'Zeg Hallo', pl: 'Przywitaj się' },
+
+  // Experience Title
+  experienceTitle: { fr: 'Expérience Professionnelle', en: 'Professional Experience', nl: 'Professionele Ervaring', pl: 'Doświadczenie Zawodowe' },
+
+  // Experience Data
+  experienceList: {
+    fr: [
+      {
+        role: 'Stagiaire / Développeur Junior (Exemple)',
+        company: 'Nom de l\'entreprise',
+        period: '2025 - Présent',
+        location: 'Bruxelles, Belgique',
+        description: 'Participation au développement d\'applications web et internes.',
+        bullets: [
+          'Développement de composants front-end avec React et Tailwind CSS.',
+          'Intégration d\'APIs REST et gestion des bases de données.',
+          'Collaboration en méthode Agile / Scrum au sein de l\'équipe.'
+        ],
+        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
+      }
+    ],
+    en: [
+      {
+        role: 'Intern / Junior Developer (Example)',
+        company: 'Company Name',
+        period: '2025 - Present',
+        location: 'Brussels, Belgium',
+        description: 'Participation in the development of web and internal applications.',
+        bullets: [
+          'Developed front-end components using React and Tailwind CSS.',
+          'Integrated REST APIs and handled database management.',
+          'Collaborated using Agile / Scrum methodology within the team.'
+        ],
+        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
+      }
+    ],
+    nl: [
+      {
+        role: 'Stagiair / Junior Developer (Voorbeeld)',
+        company: 'Bedrijfsnaam',
+        period: '2025 - Heden',
+        location: 'Brussel, België',
+        description: 'Deelname aan de ontwikkeling van web- en interne applicaties.',
+        bullets: [
+          'Frontend-componenten ontwikkeld met React en Tailwind CSS.',
+          'REST API\'s geïntegreerd en databases beheerd.',
+          'Samengewerkt volgens de Agile / Scrum methodologie.'
+        ],
+        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
+      }
+    ],
+    pl: [
+      {
+        role: 'Stażysta / Młodszy Programista (Przykład)',
+        company: 'Nazwa firmy',
+        period: '2025 - Obecnie',
+        location: 'Bruksela, Belgia',
+        description: 'Udział w tworzeniu aplikacji internetowych i wewnętrznych.',
+        bullets: [
+          'Tworzenie komponentów front-end przy użyciu React i Tailwind CSS.',
+          'Integracja API REST oraz obsługa baz danych.',
+          'Współpraca w zespole przy użyciu metodyki Agile / Scrum.'
+        ],
+        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
+      }
+    ]
+  }
 };
 
 interface LanguageContextType {
@@ -337,6 +415,7 @@ interface LanguageContextType {
   t: (key: string) => string;
   getProjects: () => ProjectTranslation[];
   getParcours: () => ParcoursTranslation[];
+  getExperiences: () => ExperienceTranslation[];
   getResumeUrl: () => string;
 }
 
@@ -360,6 +439,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return Array.isArray(value) ? (value as ParcoursTranslation[]) : [];
   };
 
+  const getExperiences = () => {
+    const value = translations.experienceList?.[lang];
+    return Array.isArray(value) ? (value as ExperienceTranslation[]) : [];
+  };
+
   const getResumeUrl = () => {
     switch (lang) {
       case 'fr': return resumeFr;
@@ -371,7 +455,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t, getProjects, getParcours, getResumeUrl }}>
+    <LanguageContext.Provider value={{ lang, setLang, t, getProjects, getParcours, getExperiences, getResumeUrl }}>
       {children}
     </LanguageContext.Provider>
   );
