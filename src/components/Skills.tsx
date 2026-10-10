@@ -37,8 +37,25 @@ const skillsData: Skill[] = [
 const CONTENT_WIDTH = 9.5;
 const CONTENT_HEIGHT = 11.5;
 
+// Vitesses d'auto-rotation (tour complet = 60 / vitesse secondes)
+const ROTATE_SPEED_DESKTOP = 0.4; // ~150 s par tour
+const ROTATE_SPEED_MOBILE = 0.25; // ~240 s par tour
+
 // Géométrie partagée par les 9 boules (créée une seule fois, 16x16 au lieu de 32x32)
 const sphereGeometry = new THREE.SphereGeometry(1, 16, 16);
+
+// Suit une media query et se met à jour si elle change
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
+  useEffect(() => {
+    const mql = window.matchMedia(query);
+    const onChange = () => setMatches(mql.matches);
+    onChange();
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, [query]);
+  return matches;
+}
 
 // Réduit la scène quand l'écran est trop petit (jamais d'agrandissement : max 1)
 function ResponsiveGroup({ children }: { children: ReactNode }) {
@@ -49,6 +66,20 @@ function ResponsiveGroup({ children }: { children: ReactNode }) {
     viewport.height / CONTENT_HEIGHT
   );
   return <group scale={scale}>{children}</group>;
+}
+
+// OrbitControls écrit "touch-action: none" sur son élément, ce qui bloque le scroll de la page.
+// Sur tactile, on le remplace par "pan-y" : vertical = scroll de la page, horizontal = rotation.
+function TouchScrollFix({ active }: { active: boolean }) {
+  const controls = useThree((state) => state.controls) as { domElement?: HTMLElement } | null;
+
+  useEffect(() => {
+    const el = controls?.domElement;
+    if (!el) return;
+    el.style.setProperty('touch-action', active ? 'pan-y' : 'none', 'important');
+  }, [controls, active]);
+
+  return null;
 }
 
 // Renvoie true quand l'élément est (presque) à l'écran
@@ -193,6 +224,11 @@ export default function Skills() {
   const { t } = useLanguage();
   const [canvasRef, inView] = useInView<HTMLDivElement>('100px');
 
+  // Écran tactile = rotation horizontale seulement (le vertical est réservé au scroll)
+  const isTouch = useMediaQuery('(pointer: coarse)');
+  // Visiteur qui a demandé moins d'animations dans son système
+  const reduceMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+
   return (
     <section id='skills' className='min-h-screen py-24 flex flex-col items-center relative bg-transparent'>
       <div className='text-center mb-12 mt-10 px-4'>
@@ -202,7 +238,10 @@ export default function Skills() {
         </p>
       </div>
 
-      <div ref={canvasRef} className='w-full h-[480px] sm:h-[600px] cursor-grab active:cursor-grabbing relative z-0'>
+      <div
+        ref={canvasRef}
+        className='w-full h-[480px] sm:h-[600px] cursor-grab active:cursor-grabbing relative z-0'
+      >
         <Canvas
           frameloop={inView ? 'always' : 'never'}
           dpr={[1, 1.5]}
@@ -219,7 +258,17 @@ export default function Skills() {
             ))}
           </ResponsiveGroup>
 
-          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.4} enablePan={false} />
+          <OrbitControls
+            makeDefault
+            enableZoom={false}
+            enablePan={false}
+            autoRotate={!reduceMotion}
+            autoRotateSpeed={isTouch ? ROTATE_SPEED_MOBILE : ROTATE_SPEED_DESKTOP}
+            // Sur tactile : rotation horizontale uniquement (angle vertical verrouillé à l'horizon)
+            minPolarAngle={isTouch ? Math.PI / 2 : 0}
+            maxPolarAngle={isTouch ? Math.PI / 2 : Math.PI}
+          />
+          <TouchScrollFix active={isTouch} />
         </Canvas>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useEffect, useContext, useState } from 'react';
 import resumeFr from '../assets/CV_fr.pdf';
 import resumeEn from '../assets/CV_en.pdf';
 import resumeNl from '../assets/CV_nl.pdf';
@@ -200,7 +200,7 @@ const translations: Translations = {
       },
       {
         title: 'Aangepaste Formulieren',
-        description: 'Met behulp van Java, het Lanterna-framework en de MVC-architectuur heb ik een applicatie gebouwd die werkt als een formulier met vragen en antwoorden. Beheer van pendeurs van de vragen en gebruikers die reageren (selectievakjes met één of meerdere antwoorden, percentages van het meest gekozen antwoord, invoerveld voor antwoorden). Dit project ging meer over Git- en Trello-beheer (branches aanmaken voor elke functie, committen, mergen, verwijderen, taggen van een commit, versionering, etc.).',
+        description: 'Met behulp van Java, het Lanterna-framework en de MVC-architectuur heb ik een applicatie gebouwd die werkt als een formulier met vragen en antwoorden. Beheer van eigenaars van de vragen en gebruikers die reageren (selectievakjes met één of meerdere antwoorden, percentages van het meest gekozen antwoord, invoerveld voor antwoorden). Dit project ging meer over Git- en Trello-beheer (branches aanmaken voor elke functie, committen, mergen, verwijderen, taggen van een commit, versionering, etc.).',
         status: 'completed',
         tech: ['Java', 'Lanterna', 'Git'],
         link: "https://github.com/ALUMNOAT/tgpr-2425-a04"
@@ -293,7 +293,7 @@ const translations: Translations = {
   },
 
   // Parcours Title
-  parcoursTitle: { fr: 'Mon Parcours', en: 'My Experience', nl: 'Mijn Ervaring', pl: 'Moje Doświadczenie' },
+  parcoursTitle: { fr: 'Mon Parcours', en: 'My Education', nl: 'Mijn Opleiding', pl: 'Moja Edukacja' },
 
   // Parcours Data
   parcoursList: {
@@ -423,6 +423,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>('fr');
+
+  // Garde l'étiquette <html lang="..."> synchronisée avec la langue choisie
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const t = (key: string) => {
     const value = translations[key]?.[lang];
