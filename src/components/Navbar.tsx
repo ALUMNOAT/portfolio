@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaHistory } from 'react-icons/fa';
 import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import type { IconType } from 'react-icons';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -12,7 +13,7 @@ interface NavbarProps {
 interface NavItem {
   key: string;
   link: string;
-  icon: React.ElementType;
+  icon: IconType;
 }
 
 export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
