@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import type { IconType } from 'react-icons';
 import { FaGithub, FaArrowRight, FaDownload, FaLinkedin, FaLastfm } from 'react-icons/fa';
-import heroNormal from '../assets/normalnie.jpg';
-import heroAlter from '../assets/ostro.jpg';
+import heroNormal from '../assets/normalnie.webp';
+import heroAlter from '../assets/ostro.webp';
 import { useLanguage } from '../context/LanguageContext';
 
 interface SocialLink {
