@@ -66,7 +66,7 @@ const translations: Translations = {
   },
   heroViewProjects: { fr: 'Voir les projets', en: 'View Projects', nl: 'Bekijk projecten', pl: 'Zobacz projekty' },
   heroResume: { fr: 'CV', en: 'Resume', nl: 'CV', pl: 'CV' },
-  heroFlipCard: { fr: 'Retourner la carte', en: 'Flip the card', nl: 'Draai de kaart om', pl: 'Odwróć kartę' },
+  heroFlipCard: { fr: 'Cliquez sur la carte', en: 'Click on the card', nl: 'Klik op de kaart', pl: 'Kliknij na kartę'},
 
   // About
   aboutTitle: { fr: 'Sur Moi', en: 'About Me', nl: 'Over Mij', pl: 'O mnie' },
