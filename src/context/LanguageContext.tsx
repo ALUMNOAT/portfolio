@@ -144,7 +144,7 @@ const translations: Translations = {
     en: [
       {
         title: 'Spreadsheet (Analysis & Conception)',
-        description: 'Using Java, JavaFX library and MVVM architecture, I built a spreadsheet like Excel with cell recursion, math precedence order (PEMA) and import/export of the spreadsheet in a custom format given by the school. Used Builder design pattern.',
+        description: 'Using Java, JavaFX library and MVVM architecture, I built a spreadsheet like Excel with cell recursion, math precedence order (PEMDAS) and import/export of the spreadsheet in a custom format given by the school. Used Builder design pattern.',
         status: 'completed',
         tech: ['Java', 'JavaFX'],
         link: "https://github.com/ALUMNOAT/anc3-2425-a03"
@@ -172,7 +172,7 @@ const translations: Translations = {
       },
       {
         title: 'Industrial Network (Network Security)',
-        description: 'Using Virtual Box and pfSense, I built a WAN (physical PC), LAN (Windows 10 and Windows Server 2019), DMZ (Ubuntu Server). Used Active Diectories (AD), Organisational Unit (OU) and Group Policy Objects (GPO).',
+        description: 'Using Virtual Box and pfSense, I built a WAN (physical PC), LAN (Windows 10 and Windows Server 2019), DMZ (Ubuntu Server). Used Active Directory (AD), Organisational Unit (OU) and Group Policy Objects (GPO).',
         status: 'completed',
         tech: ['pfSense', 'Oracle Virtual Box', 'Cisco Packet Tracer'],
         link: rapportSNET
@@ -340,7 +340,9 @@ const translations: Translations = {
     nl: 'Mijn mailbox staat altijd open. Of je nu een vraag hebt of gewoon gedag wilt zeggen, ik reageer snel!',
     pl: 'Moja skrzynka odbiorcza jest zawsze otwarta. Niezależnie od tego, czy masz pytanie, czy po prostu chcesz się przywitać, odezwę się!'
   },
-  contactButton: { fr: 'Dis Bonjour', en: 'Say Hello', nl: 'Zeg Hallo', pl: 'Przywitaj się' },
+  contactButton: { fr: 'Dites Bonjour', en: 'Say Hello', nl: 'Zeg Hallo', pl: 'Przywitaj się' },
+  contactCopy: { fr: 'Copier', en: 'Copy', nl: 'Kopiëren', pl: 'Kopiuj' },
+  contactCopied: { fr: 'Copié !', en: 'Copied!', nl: 'Gekopieerd!', pl: 'Skopiowano!' },
 
   // TODO: remplacer l'exemple par ma vraie expérience
   // Experience Title
