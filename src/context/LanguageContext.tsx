@@ -350,63 +350,103 @@ const translations: Translations = {
   experienceList: {
     fr: [
       {
-        role: 'Stagiaire / Développeur Junior (Exemple)',
-        company: 'Nom de l\'entreprise',
-        period: '2025 - Présent',
+        role: 'Assistant Administratif & Support Opérationnel',
+        company: '(Aide Familiale)',
+        period: '2020 - 2023',
         location: 'Bruxelles, Belgique',
-        description: 'Participation au développement d\'applications web et internes.',
         bullets: [
-          'Développement de composants front-end avec React et Tailwind CSS.',
-          'Intégration d\'APIs REST et gestion des bases de données.',
-          'Collaboration en méthode Agile / Scrum au sein de l\'équipe.'
+          'Gestion administrative : Préparation et suivi des factures de l\'entreprise, classement et aide à la comptabilité.',
+          'Support linguistique : Traduction de documents professionnels et support de communication.',
+          'Rénovation & Chantier : Travaux de second œuvre (peinture, finition) exigeant rigueur, gestion de l\'effort et souci du détail.'
         ],
-        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
-      }
+      },
+      {
+        role: 'Employé Événementiel & Logistique',
+        company: 'Rock The City',
+        period: '2024 - Présent',
+        location: 'Bruxelles, Belgique',
+        description: 'Job étudiant',
+        bullets: [
+          'Logistique & Accueil : Gestion des flux, rôle de runner et vente sur des événements grands publics (Exposition Schtroumpf Expérience au Heysel).',
+          'Support institutionnel : Assistance logistique lors d\'événements à l\'Hôtel de Ville de Bruxelles.',
+          'Communication de terrain : Distribution et promotion lors de campagnes événementielles.'
+        ],
+      },
     ],
     en: [
       {
-        role: 'Intern / Junior Developer (Example)',
-        company: 'Company Name',
-        period: '2025 - Present',
+        role: 'Administrative Assistant & Operational Support',
+        company: '(Family Help / Family Business)',
+        period: '2020 - 2023',
         location: 'Brussels, Belgium',
-        description: 'Participation in the development of web and internal applications.',
         bullets: [
-          'Developed front-end components using React and Tailwind CSS.',
-          'Integrated REST APIs and handled database management.',
-          'Collaborated using Agile / Scrum methodology within the team.'
+          'Administrative management: Preparation and tracking of company invoices, filing, and accounting support.',
+          'Linguistic support: Translation of professional documents and communication support.',
+          'Renovation & Construction: Finishing works (painting, finishing) requiring rigor, physical effort management, and attention to detail.'
         ],
-        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
-      }
+      },
+      {
+        role: 'Event & Logistics Employee',
+        company: 'Rock The City',
+        period: '2024 - Present',
+        location: 'Brussels, Belgium',
+        description: 'Student job',
+        bullets: [
+          'Logistics & Reception: Flow management, runner role, and sales at large public events (Smurf Experience Exhibition at Heysel).',
+          'Institutional support: Logistics assistance during events at Brussels City Hall.',
+          'Field communication: Distribution and promotion during event campaigns.'
+        ],
+      },
     ],
     nl: [
       {
-        role: 'Stagiair / Junior Developer (Voorbeeld)',
-        company: 'Bedrijfsnaam',
-        period: '2025 - Heden',
+        role: 'Administratief Assistent & Operationele Ondersteuning',
+        company: '(Familiehulp)',
+        period: '2020 - 2023',
         location: 'Brussel, België',
-        description: 'Deelname aan de ontwikkeling van web- en interne applicaties.',
         bullets: [
-          'Frontend-componenten ontwikkeld met React en Tailwind CSS.',
-          'REST API\'s geïntegreerd en databases beheerd.',
-          'Samengewerkt volgens de Agile / Scrum methodologie.'
+          'Administratief beheer: Voorbereiding en opvolging van bedrijfsfacturen, klassement en ondersteuning bij de boekhouding.',
+          'Taalkundige ondersteuning: Vertaling van professionele documenten en communicatieondersteuning.',
+          'Renovatie & Bouw: Afwerkingswerkzaamheden (schilderen, afwerking) die nauwkeurigheid, fysieke inzet en oog voor detail vereisen.'
         ],
-        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
-      }
+      },
+      {
+        role: 'Evenementen- & Logistiek Medewerker',
+        company: 'Rock The City',
+        period: '2024 - Heden',
+        location: 'Brussel, België',
+        description: 'Studentenjob',
+        bullets: [
+          'Logistiek & Onthaal: Beheer van bezoekersstromen, rol als runner en verkoop tijdens grootschalige evenementen (Smurf Experience-tentoonstelling op de Heizel).',
+          'Institutionele ondersteuning: Logistieke bijstand tijdens evenementen in het Stadhuis van Brussel.',
+          'Veldcommunicatie: Distributie en promotie tijdens evenementencampagnes.'
+        ],
+      },
     ],
     pl: [
       {
-        role: 'Stażysta / Młodszy Programista (Przykład)',
-        company: 'Nazwa firmy',
-        period: '2025 - Obecnie',
+        role: 'Asystent Administracyjny i Wsparcie Operacyjne',
+        company: '(Pomoc Rodzinna)',
+        period: '2020 - 2023',
         location: 'Bruksela, Belgia',
-        description: 'Udział w tworzeniu aplikacji internetowych i wewnętrznych.',
         bullets: [
-          'Tworzenie komponentów front-end przy użyciu React i Tailwind CSS.',
-          'Integracja API REST oraz obsługa baz danych.',
-          'Współpraca w zespole przy użyciu metodyki Agile / Scrum.'
+          'Zarządzanie administracyjne: Przygotowywanie i monitorowanie faktur firmowych, archiwizacja oraz wsparcie w księgowości.',
+          'Wsparcie językowe: Tłumaczenie dokumentów zawodowych i wsparcie w komunikacji.',
+          'Remonty i Prace Budowlane: Prace wykończeniowe (malowanie, wykończenia) wymagające skrupulatności, dobrej organizacji pracy i dbałości o detale.'
         ],
-        tech: ['React', 'Tailwind CSS', 'TypeScript', 'Node.js']
-      }
+      },
+      {
+        role: 'Pracownik ds. Eventów i Logistyki',
+        company: 'Rock The City',
+        period: '2024 - Obecnie',
+        location: 'Bruksela, Belgia',
+        description: 'Praca studencka',
+        bullets: [
+          'Logistyka i Obsługa Klienta: Zarządzanie przepływem ludzi, rola runnera oraz sprzedaż podczas wydarzeń masowych (Wystawa Smurf Experience na Heysel).',
+          'Wsparcie instytucjonalne: Pomoc logistyczna podczas wydarzeń w Ratuszu w Brukseli.',
+          'Komunikacja w terenie: Dystrybucja materiałów i promocja podczas kampanii eventowych.'
+        ],
+      },
     ]
   }
 };
