@@ -181,7 +181,7 @@ export default function Hero() {
             </span>
 
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white'>
-              {t('heroTitle')} <span className='text-red-600'>Gorski Emilian</span>
+              {t('heroTitle')} <span className='text-red-600'>Emilian Gorski</span>
               <span className='block mt-2 text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-600 dark:text-gray-400'>
                 {t('heroSubtitle')}
               </span>

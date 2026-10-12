@@ -59,7 +59,7 @@ const translations: Translations = {
     pl: 'Student Informatyki - Tworzenie Aplikacji (Informatyka Biznesowa)'
   },
   heroDescription: {
-    fr: 'Je construis des applications du backend au frontend. Je suis prêt pour un stage ou un travail à mi-temps, car il ne me reste que 2 projets et mon Travail de Fin d\'Études (TFE) à réaliser. En me prenant, vous avez 3 mois où vous pouvez me former gratuitement (via une convention de stage). Je vois ça comme un win-win.',
+    fr: 'Je construis des applications du backend au frontend. Je suis prêt pour un stage ou un travail à mi-temps, car il ne me reste que deux projets et mon Travail de Fin d\'Études (TFE) à réaliser. En me prenant, vous avez trois mois où vous pouvez me former gratuitement (via une convention de stage). Je vois ça comme un win-win.',
     en: 'I build everything from backend to frontend. I am ready for an internship or a part-time job, as I still have 2 projects and my Thesis to complete. By taking me on, you get 3 months where you can train me for free (via an internship agreement). I see it as a win-win.',
     nl: 'Ik bouw alles van backend tot frontend. Ik ben klaar voor een stage of een deeltijdse job, aangezien ik nog 2 projecten en mijn eindwerk moet voltooien. Door mij te nemen, krijg je 3 maanden de tijd om mij gratis op te leiden (via een stageovereenkomst). Ik zie het als een win-win.',
     pl: 'Tworzę wszystko od backendu po frontend. Jestem gotowy na staż lub pracę w niepełnym wymiarze godzin, ponieważ do zrobienia zostały mi tylko 2 projekty i praca dyplomowa. Biorąc mnie na staż, zyskujesz 3 miesiące, w których możesz mnie przeszkolić za darmo (poprzez umowę o staż). Widzę to jako win-win.'
@@ -69,9 +69,9 @@ const translations: Translations = {
   heroFlipCard: { fr: 'Cliquez sur la carte', en: 'Click on the card', nl: 'Klik op de kaart', pl: 'Kliknij na kartę'},
 
   // About
-  aboutTitle: { fr: 'Sur Moi', en: 'About Me', nl: 'Over Mij', pl: 'O mnie' },
+  aboutTitle: { fr: 'Sur moi', en: 'About Me', nl: 'Over mij', pl: 'O mnie' },
   aboutDescription: {
-    fr: 'Je me suis intéressé à l\'informatique quand j\'avais une Nintendo DS avec une CycloDS Evolution : je devais y insérer des cheat codes et comprendre un peu l\'hexadécimal pour faire des modifications. Ensuite, ça a été le jailbreak d\'une Wii et l\'installation de l\'Homebrew Channel pour avoir tous les jeux. Je suis un développeur passionné. Quand je ne code pas, je joue aux jeux vidéo, je regarde des vidéos d\'économie, je m\'intéresse aux nouveautés technologiques et je télécharge de la musique en FLAC pour la convertir en OPUS 214 kbps avec VBR (parce que Spotify est cher et FLAC prend trop de place xD). On se débrouille comme on peut ! Au moins, ça montre mon côté débrouillard et curieux, qui aime comprendre comment tout fonctionne sous le capot.',
+    fr: 'Je me suis intéressé à l’informatique grâce à ma Nintendo DS avec une CycloDS Évolution : je devais y insérer des codes de triche et comprendre un peu l’hexadécimal pour effectuer des modifications. Ensuite, ça a été le débridage d\'une Wii et l\'installation de l\'Homebrew Channel pour avoir tous les jeux. Je suis un développeur passionné. En plus du temps que je consacre au codage, j’ai plusieurs hobbies : jouer à des jeux vidéo, regarder des vidéos économiques, me tenir au courant des dernières tendances technologiques et télécharger de la musique en qualité FLAC, que je transforme ensuite en OPUS à 214 kbit/s avec un taux de compression variable. Je trouve l’abonnement à Spotify trop cher et les fichiers FLAC trop volumineux. On se débrouille comme on peut ! Au moins, ça montre mon côté débrouillard et curieux, qui aime comprendre comment tout fonctionne sous le capot.',
     en: 'I first got into computers when I had a Nintendo DS with a CycloDS Evolution: I had to insert cheat codes and understand a bit of hexadecimal to make modifications. Later on, it was jailbreaking a Wii and installing the Homebrew Channel to get games. I am a passionate developer. When I am not coding, I play video games, watch economics videos, keep up with tech trends, and download FLAC music to convert it into OPUS 214 kbps with VBR (because Spotify is expensive and FLAC takes up too much space xD). You do what you gotta do! At least it shows my resourceful side and that I like to question everything to understand how things work under the hood.',
     nl: 'Ik raakte voor het eerst geïnteresseerd in computers toen ik een Nintendo DS had met een CycloDS Evolution: ik moest cheatcodes invoeren en een beetje hexadecimaal begrijpen om aanpassingen te doen. Later volgde het jailbreaken van een Wii en het installeren van het Homebrew Channel om games te spelen. Ik ben een gepassioneerde developer. Als ik niet aan het coderen ben, speel ik videogames, kijk ik economie-video\'s, volg ik technologietrends en download ik FLAC-muziek om deze om te zetten naar OPUS 214 kbps met VBR (want Spotify is duur en FLAC neemt te veel ruimte in beslag xD). Je moet wat! Het toont tenminste mijn vindingrijke kant en dat ik alles in twijfel trek om te begrijpen hoe dingen onder de motorkap werken.',
     pl: 'Informatyką zainteresowałem się, gdy miałem Nintendo DS z kartą CycloDS Evolution – musiałem wpisywać kody i rozumieć nieco system szesnastkowy, żeby wprowadzać modyfikacje. Potem przyszedł jailbreak Wii i instalacja Homebrew Channel. Jestem pasjonatem programowania. Kiedy nie koduję, gram w gry wideo, oglądam materiały o ekonomii, śledzę nowinki technologiczne i pobieram muzykę w formacie FLAC, żeby przekonwertować ją na OPUS 214 kbps z VBR (bo Spotify jest drogie, a FLAC zajmuje za dużo miejsca xD). Radzi sobie człowiek, jak może! To przynajmniej pokazuje moją zaradność i to, że lubię wszystko kwestionować, żeby zrozumieć, jak rzeczy działają od podszewki.'
@@ -101,21 +101,21 @@ const translations: Translations = {
       },
       {
         title: 'Formulaires Personnalisés',
-        description: 'En utilisant Java, le framework Lanterna et l\'architecture MVC, j\'ai développé une application fonctionnant comme un formulaire de questions/réponses. Gestion des propriétaires de questions et des utilisateurs répondant (cases à cocher à réponse unique ou multiple, pourcentages de la réponse la plus choisie, espace de saisie de réponse). Ce projet était davantage axé sur la gestion de Git et Trello (création de branches pour chaque fonctionnalité, commits, fusions, suppressions, étiquetage de commit, versionnement, etc.).',
+        description: 'En utilisant Java, le framework Lanterna et l\'architecture MVC, j\'ai développé une application fonctionnant comme un formulaire de questions/réponses. Gestion des propriétaires de questions et des utilisateurs répondants (cases à cocher à réponse unique ou multiple, pourcentages de la réponse la plus choisie, espace de saisie de réponse). Ce projet était davantage axé sur la gestion de Git et Trello (création de branches pour chaque fonctionnalité, commits, fusions, suppressions, étiquetage de commit, versionnement, etc.).',
         status: 'completed',
         tech: ['Java', 'Lanterna', 'Git'],
         link: "https://github.com/ALUMNOAT/tgpr-2425-a04"
       },
       {
         title: 'Site Web E-Commerce (Développement Web)',
-        description: 'En utilisant PHP comme backend, un framework d\'école, l\'architecture MVC et MySQL comme base de données, j\'ai créé un site e-commerce avec option d\'enchères/achat (utilisation de TRANSACTIONS), barre de recherche d\'articles, filtres par nom d\'acheteur/catégorie d\'article, etc. Utilisation de requêtes AJAX, de JavaScript et du motif de conception Post-Redirect-Get.',
+        description: 'Avec PHP comme technologie backend, l’architecture MVC et MySQL comme base de données, j’ai développé une plateforme de commerce électronique dotée de fonctionnalités telles que la possibilité d’enchérir ou d’acheter immédiatement (grâce à l’utilisation des transactions), une barre de recherche d’articles, des filtres par nom d’utilisateur et catégorie d’article, et bien plus encore. Utilisation de requêtes AJAX, de JavaScript et du motif de conception Post-Redirect-Get.',
         status: 'completed',
         tech: ['PHP', 'LAMP stack', 'Git', 'JavaScript'],
         link: "https://github.com/ALUMNOAT/prwb_2526_d01"
       },
       {
         title: 'Application de Réservation de Restaurant (Gestion de Base de Données)',
-        description: 'En utilisant Dart, le framework Flutter, PostgREST comme API REST et PostgreSQL comme base de données/serveur, ainsi que des jetons JWT pour l\'authentification, j\'ai construit une application de réservation de restaurant comprenant des restaurants, des services, des gestionnaires et des clients. Le backend est géré par des scripts PostgreSQL, et le frontend par Flutter.',
+        description: 'En utilisant Dart et le framework Flutter, PostgREST comme API REST, et PostgreSQL comme base de données/serveur, j’ai construit une application de réservation de restaurant comprenant des restaurants, des services, des gestionnaires et des clients. J’ai aussi intégré des jetons JWT pour l’authentification. Le backend est géré par des scripts PostgreSQL, et le frontend par Flutter.',
         status: 'completed',
         tech: ['Dart', 'Flutter', 'PostgREST', 'PostgreSQL'],
         link: "https://github.com/ALUMNOAT/prbd-2526-a02"
@@ -135,7 +135,7 @@ const translations: Translations = {
       },
       {
         title: 'Application CRUD (Projet d\'Intégration au Développement) (feuille de route)',
-        description: 'Création d\'un site web de réservation de billets de théâtre en utilisant Spring Boot comme backend et Angular.js comme frontend. Projet non encore commencé, il sera détaillé ultérieurement.',
+        description: 'Conception d’un site de réservation de billets de théâtre en employant Spring Boot pour le backend et Angular.js pour le frontend. Projet non encore commencé, il sera détaillé ultérieurement.',
         status: 'in-progress',
         tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
@@ -300,7 +300,7 @@ const translations: Translations = {
   parcoursList: {
     fr: [
       { year: '2007-2012', title: '2e-6e année primaire', subtitle: 'École fondamentale communale n° 10' },
-      { year: '2012-2018', title: '1e-6e secondaire général - Profil Math-Sciences', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Classe en immersion néerlandophone. 6 heures de mathématiques, 4 heures de néerlandais, 6 heures de sciences.' },
+      { year: '2012-2018', title: '1ere-6eme secondaire général - Profil Math-Sciences', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Classe en immersion néerlandophone. 6 heures de mathématiques, 4 heures de néerlandais, 6 heures de sciences.' },
       { year: '2018-2019', title: '7e année préparatoire en mathématiques', subtitle: 'Institut St-Louis', description: 'Une année de préparation intensive en mathématiques pour réussir l’examen d’admission en ingénieur civil. Réussi !' },
       { year: '2019-2022', title: 'Bachelier en Sciences de l’Ingénieur', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Non réussi.' },
       { year: '2022-2023', title: 'Bachelier en Sciences Informatiques', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Non réussi.' },
@@ -335,7 +335,7 @@ const translations: Translations = {
   // Contact
   contactTitle: { fr: 'Contactez-moi', en: 'Contact Me', nl: 'Neem Contact Op', pl: 'Skontaktuj się' },
   contactDescription: {
-    fr: 'Ma boîte de réception est toujours ouverte. Que vous ayez une question ou simplement envie de dire bonjour, je vous répondrai !',
+    fr: 'Ma boîte de réception est toujours ouverte. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, je vous répondrai !',
     en: 'My inbox is always open. Whether you have a question or just want to say hi, I\'ll get back to you!',
     nl: 'Mijn mailbox staat altijd open. Of je nu een vraag hebt of gewoon gedag wilt zeggen, ik reageer snel!',
     pl: 'Moja skrzynka odbiorcza jest zawsze otwarta. Niezależnie od tego, czy masz pytanie, czy po prostu chcesz się przywitać, odezwę się!'
@@ -344,7 +344,6 @@ const translations: Translations = {
   contactCopy: { fr: 'Copier', en: 'Copy', nl: 'Kopiëren', pl: 'Kopiuj' },
   contactCopied: { fr: 'Copié !', en: 'Copied!', nl: 'Gekopieerd!', pl: 'Skopiowano!' },
 
-  // TODO: remplacer l'exemple par ma vraie expérience
   // Experience Title
   experienceTitle: { fr: 'Expérience Professionnelle', en: 'Professional Experience', nl: 'Professionele Ervaring', pl: 'Doświadczenie Zawodowe' },
 
@@ -369,7 +368,7 @@ const translations: Translations = {
         location: 'Bruxelles, Belgique',
         description: 'Job étudiant',
         bullets: [
-          'Logistique & Accueil : Gestion des flux, rôle de runner et vente sur des événements grands publics (Exposition Schtroumpf Expérience au Heysel).',
+          'Organisation logistique et accueil : gérer les mouvements, assurer le rôle de coureur et vendre des billets lors d’événements grand public (Exposition Schtroumpf Expérience au Heysel).',
           'Support institutionnel : Assistance logistique lors d\'événements à l\'Hôtel de Ville de Bruxelles.',
           'Communication de terrain : Distribution et promotion lors de campagnes événementielles.'
         ],
