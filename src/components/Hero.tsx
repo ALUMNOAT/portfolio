@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import type { IconType } from 'react-icons';
-import { FaGithub, FaArrowRight, FaDownload, FaLinkedin, FaLastfm } from 'react-icons/fa';
+import { FaGithub, FaArrowRight, FaDownload, FaLinkedin } from 'react-icons/fa';
 import heroNormal from '../assets/normalnie.webp';
-import heroAlter from '../assets/ostro.webp';
 import { useLanguage } from '../context/LanguageContext';
 
 interface SocialLink {
@@ -31,14 +30,7 @@ const glareStyle: CSSProperties = {
   transition: 'opacity 300ms',
 };
 
-const faceStyle: CSSProperties = {
-  backfaceVisibility: 'hidden',
-  WebkitBackfaceVisibility: 'hidden',
-};
-
 function PhotoCard() {
-  const { t } = useLanguage();
-  const [flipped, setFlipped] = useState(false);
   const tiltRef = useRef<HTMLDivElement>(null);
 
   const setVars = (rx: number, ry: number, mx: number, my: number, o: number) => {
@@ -99,64 +91,34 @@ function PhotoCard() {
   }, []);
 
   return (
-    <div className='flex flex-col items-center gap-4'>
-      <div className='relative group' style={{ perspective: '1000px' }}>
-        {/* Halo rouge derrière la carte */}
-        <div className='absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-3xl filter blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500' />
+    <div className='relative group' style={{ perspective: '1000px' }}>
+      {/* Halo rouge derrière la carte */}
+      <div className='absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-3xl filter blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500' />
 
-        <div
-          ref={tiltRef}
-          onPointerMove={onPointerMove}
-          onPointerLeave={onPointerLeave}
-          className='relative w-64 h-[22rem] sm:w-72 sm:h-96'
-          style={
-            {
-              '--rx': '0deg',
-              '--ry': '0deg',
-              '--mx': '50%',
-              '--my': '50%',
-              '--o': 0.6,
-              transform: 'rotateX(var(--rx)) rotateY(var(--ry))',
-              transformStyle: 'preserve-3d',
-              transition: 'transform 150ms ease-out',
-            } as CSSProperties
-          }
-        >
-          <button
-            type='button'
-            onClick={() => setFlipped((f) => !f)}
-            aria-label={t('heroFlipCard')}
-            className='relative block w-full h-full cursor-pointer rounded-2xl focus-visible:outline-2 focus-visible:outline-red-500 focus-visible:outline-offset-4'
-            style={{
-              transformStyle: 'preserve-3d',
-              transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-              transition: 'transform 700ms cubic-bezier(.4,.2,.2,1)',
-            }}
-          >
-            {/* Face avant : photo sérieuse */}
-            <div
-              className='absolute inset-0 rounded-2xl overflow-hidden border-2 border-red-500/40 shadow-xl'
-              style={faceStyle}
-            >
-              <img src={heroNormal} alt='Portrait de Gorski Emilian' className='w-full h-full object-cover' />
-              <div className='absolute inset-0 pointer-events-none' style={foilStyle} />
-              <div className='absolute inset-0 pointer-events-none' style={glareStyle} />
-            </div>
-
-            {/* Face arrière : Alter Ego */}
-            <div
-              className='absolute inset-0 rounded-2xl overflow-hidden border-2 border-red-500/40 shadow-xl'
-              style={{ ...faceStyle, transform: 'rotateY(180deg)' }}
-            >
-              <img src={heroAlter} alt='Gorski Emilian, version Alter Ego' className='w-full h-full object-cover' />
-              <div className='absolute inset-0 pointer-events-none' style={foilStyle} />
-              <div className='absolute inset-0 pointer-events-none' style={glareStyle} />
-            </div>
-          </button>
+      <div
+        ref={tiltRef}
+        onPointerMove={onPointerMove}
+        onPointerLeave={onPointerLeave}
+        className='relative w-64 h-[22rem] sm:w-72 sm:h-96'
+        style={
+          {
+            '--rx': '0deg',
+            '--ry': '0deg',
+            '--mx': '50%',
+            '--my': '50%',
+            '--o': 0.6,
+            transform: 'rotateX(var(--rx)) rotateY(var(--ry))',
+            transformStyle: 'preserve-3d',
+            transition: 'transform 150ms ease-out',
+          } as CSSProperties
+        }
+      >
+        <div className='absolute inset-0 rounded-2xl overflow-hidden border-2 border-red-500/40 shadow-xl'>
+          <img src={heroNormal} alt='Portrait de Gorski Emilian' className='w-full h-full object-cover' />
+          <div className='absolute inset-0 pointer-events-none' style={foilStyle} />
+          <div className='absolute inset-0 pointer-events-none' style={glareStyle} />
         </div>
       </div>
-
-      <span className='text-sm text-gray-500 dark:text-gray-400'>↻ {t('heroFlipCard')}</span>
     </div>
   );
 }
@@ -167,7 +129,6 @@ export default function Hero() {
   const socialIcons: SocialLink[] = [
     { icon: FaLinkedin, name: 'LinkedIn', link: 'https://www.linkedin.com/in/emilian-gorski-412484158' },
     { icon: FaGithub, name: 'GitHub', link: 'https://github.com/ALUMNOAT' },
-    { icon: FaLastfm, name: 'Last.fm', link: 'https://www.last.fm/user/ardentslutuwu' }
   ];
 
   return (

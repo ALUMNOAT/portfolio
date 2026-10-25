@@ -51,30 +51,29 @@ const translations: Translations = {
 
   // Hero
   heroWelcome: { fr: 'Bienvenue sur mon portfolio', en: 'Welcome to my portfolio', nl: 'Welkom op mijn portfolio', pl: 'Witaj w moim portfolio' },
-  heroTitle: { fr: 'Salut, je m\'appelle', en: 'Hello, my name is', nl: 'Hoi, mijn naam is', pl: 'Cześć, nazywam się' },
+  heroTitle: { fr: 'Bonjour, je suis', en: 'Hello, my name is', nl: 'Hallo, mijn naam is', pl: 'Dzień dobry, nazywam się' },
   heroSubtitle: {
-    fr: 'Étudiant en Informatique - Développement des Applications (Informatique de Gestion)',
-    en: 'IT Student - Application Development (Business IT)',
-    nl: 'IT-student - Applicatieontwikkeling (Bedrijfsinformatica)',
-    pl: 'Student Informatyki - Tworzenie Aplikacji (Informatyka Biznesowa)'
+    fr: 'Étudiant en Informatique (Développement d\'applications) | Stagiaire Full Stack Developer',
+    en: 'IT Student (Application Development) | Full Stack Developer Intern',
+    nl: 'IT-student (Applicatieontwikkeling) | Stagiair Full Stack Developer',
+    pl: 'Student Informatyki (Tworzenie Aplikacji) | Stażysta Full Stack Developer'
   },
   heroDescription: {
-    fr: 'Je construis des applications du backend au frontend. Je suis prêt pour un stage ou un travail à mi-temps, car il ne me reste que deux projets et mon Travail de Fin d\'Études (TFE) à réaliser. En me prenant, vous avez trois mois où vous pouvez me former gratuitement (via une convention de stage). Je vois ça comme un win-win.',
-    en: 'I build everything from backend to frontend. I am ready for an internship or a part-time job, as I still have 2 projects and my Thesis to complete. By taking me on, you get 3 months where you can train me for free (via an internship agreement). I see it as a win-win.',
-    nl: 'Ik bouw alles van backend tot frontend. Ik ben klaar voor een stage of een deeltijdse job, aangezien ik nog 2 projecten en mijn eindwerk moet voltooien. Door mij te nemen, krijg je 3 maanden de tijd om mij gratis op te leiden (via een stageovereenkomst). Ik zie het als een win-win.',
-    pl: 'Tworzę wszystko od backendu po frontend. Jestem gotowy na staż lub pracę w niepełnym wymiarze godzin, ponieważ do zrobienia zostały mi tylko 2 projekty i praca dyplomowa. Biorąc mnie na staż, zyskujesz 3 miesiące, w których możesz mnie przeszkolić za darmo (poprzez umowę o staż). Widzę to jako win-win.'
+    fr: 'Je construis des applications du backend au frontend (Java, PHP, JavaScript, PostgreSQL). Je suis disponible pour un stage de 3 mois (convention de stage) ou un job à temps partiel, en parallèle de mes deux derniers projets et de mon Travail de Fin d\'Études (TFE).',
+    en: 'I build applications from backend to frontend (Java, PHP, JavaScript, PostgreSQL). I am available for a 3-month internship (internship agreement) or a part-time job, alongside my last two projects and my thesis.',
+    nl: 'Ik bouw applicaties van backend tot frontend (Java, PHP, JavaScript, PostgreSQL). Ik ben beschikbaar voor een stage van 3 maanden (stageovereenkomst) of een deeltijdse job, naast mijn laatste twee projecten en mijn eindwerk.',
+    pl: 'Tworzę aplikacje od backendu po frontend (Java, PHP, JavaScript, PostgreSQL). Jestem dostępny na 3-miesięczny staż (umowa o staż) lub pracę w niepełnym wymiarze godzin, równolegle z moimi dwoma ostatnimi projektami i pracą dyplomową.'
   },
   heroViewProjects: { fr: 'Voir les projets', en: 'View Projects', nl: 'Bekijk projecten', pl: 'Zobacz projekty' },
   heroResume: { fr: 'CV', en: 'Resume', nl: 'CV', pl: 'CV' },
-  heroFlipCard: { fr: 'Cliquez sur la carte', en: 'Click on the card', nl: 'Klik op de kaart', pl: 'Kliknij na kartę'},
 
   // About
   aboutTitle: { fr: 'Sur moi', en: 'About Me', nl: 'Over mij', pl: 'O mnie' },
   aboutDescription: {
-    fr: 'Je me suis intéressé à l’informatique grâce à ma Nintendo DS avec une CycloDS Évolution : je devais y insérer des codes de triche et comprendre un peu l’hexadécimal pour effectuer des modifications. Ensuite, ça a été le débridage d\'une Wii et l\'installation de l\'Homebrew Channel pour avoir tous les jeux. Je suis un développeur passionné. En plus du temps que je consacre au codage, j’ai plusieurs hobbies : jouer à des jeux vidéo, regarder des vidéos économiques, me tenir au courant des dernières tendances technologiques et télécharger de la musique en qualité FLAC, que je transforme ensuite en OPUS à 214 kbit/s avec un taux de compression variable. Je trouve l’abonnement à Spotify trop cher et les fichiers FLAC trop volumineux. On se débrouille comme on peut ! Au moins, ça montre mon côté débrouillard et curieux, qui aime comprendre comment tout fonctionne sous le capot.',
-    en: 'I first got into computers when I had a Nintendo DS with a CycloDS Evolution: I had to insert cheat codes and understand a bit of hexadecimal to make modifications. Later on, it was jailbreaking a Wii and installing the Homebrew Channel to get games. I am a passionate developer. When I am not coding, I play video games, watch economics videos, keep up with tech trends, and download FLAC music to convert it into OPUS 214 kbps with VBR (because Spotify is expensive and FLAC takes up too much space xD). You do what you gotta do! At least it shows my resourceful side and that I like to question everything to understand how things work under the hood.',
-    nl: 'Ik raakte voor het eerst geïnteresseerd in computers toen ik een Nintendo DS had met een CycloDS Evolution: ik moest cheatcodes invoeren en een beetje hexadecimaal begrijpen om aanpassingen te doen. Later volgde het jailbreaken van een Wii en het installeren van het Homebrew Channel om games te spelen. Ik ben een gepassioneerde developer. Als ik niet aan het coderen ben, speel ik videogames, kijk ik economie-video\'s, volg ik technologietrends en download ik FLAC-muziek om deze om te zetten naar OPUS 214 kbps met VBR (want Spotify is duur en FLAC neemt te veel ruimte in beslag xD). Je moet wat! Het toont tenminste mijn vindingrijke kant en dat ik alles in twijfel trek om te begrijpen hoe dingen onder de motorkap werken.',
-    pl: 'Informatyką zainteresowałem się, gdy miałem Nintendo DS z kartą CycloDS Evolution – musiałem wpisywać kody i rozumieć nieco system szesnastkowy, żeby wprowadzać modyfikacje. Potem przyszedł jailbreak Wii i instalacja Homebrew Channel. Jestem pasjonatem programowania. Kiedy nie koduję, gram w gry wideo, oglądam materiały o ekonomii, śledzę nowinki technologiczne i pobieram muzykę w formacie FLAC, żeby przekonwertować ją na OPUS 214 kbps z VBR (bo Spotify jest drogie, a FLAC zajmuje za dużo miejsca xD). Radzi sobie człowiek, jak może! To przynajmniej pokazuje moją zaradność i to, że lubię wszystko kwestionować, żeby zrozumieć, jak rzeczy działają od podszewki.'
+    fr: 'Je me suis intéressé à l’informatique grâce à ma Nintendo DS et sa flashcard CycloDS Evolution : pour y insérer des codes de triche, j’ai dû comprendre un peu d’hexadécimal. Cette curiosité m’a ensuite mené à bidouiller une Wii avec le Homebrew Channel. Je suis un développeur passionné. En dehors du code, je joue aux jeux vidéo, je regarde des vidéos sur l’économie et je me tiens au courant des tendances technologiques. J’aime comprendre comment les choses fonctionnent sous le capot, et je n’hésite pas à tout remettre en question pour y arriver.',
+    en: 'I got into computing through my Nintendo DS and its CycloDS Evolution flashcart: to enter cheat codes, I had to learn a bit of hexadecimal. That curiosity later led me to tinker with a Wii and the Homebrew Channel. I am a passionate developer. Outside of coding, I play video games, watch economics videos and keep up with tech trends. I like to understand how things work under the hood, so I question everything to get there.',
+    nl: 'Ik raakte geïnteresseerd in computers door mijn Nintendo DS met een CycloDS Evolution: om cheatcodes in te voeren moest ik een beetje hexadecimaal begrijpen. Die nieuwsgierigheid bracht me later bij het aanpassen van een Wii met het Homebrew Channel. Ik ben een gepassioneerde developer. Naast coderen speel ik videogames, kijk ik naar economievideo’s en volg ik de nieuwste technologietrends. Ik wil begrijpen hoe dingen onder de motorkap werken en stel daarom graag alles in vraag.',
+    pl: 'Informatyką zainteresowałem się dzięki Nintendo DS z kartą CycloDS Evolution: żeby wprowadzać kody, musiałem zrozumieć trochę systemu szesnastkowego. Ta ciekawość zaprowadziła mnie potem do modyfikowania konsoli Wii z Homebrew Channel. Jestem pasjonatem programowania. Poza kodowaniem gram w gry wideo, oglądam materiały o ekonomii i śledzę nowinki technologiczne. Lubię rozumieć, jak rzeczy działają od podszewki, dlatego chętnie wszystko kwestionuję.'
   },
 
   // Skills
@@ -135,9 +134,9 @@ const translations: Translations = {
       },
       {
         title: 'Application CRUD (Projet d\'Intégration au Développement) (feuille de route)',
-        description: 'Conception d’un site de réservation de billets de théâtre en employant Spring Boot pour le backend et Angular.js pour le frontend. Projet non encore commencé, il sera détaillé ultérieurement.',
-        status: 'in-progress',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
+        description: 'Conception d’un site de réservation de billets de théâtre avec Spring Boot pour le backend et Angular pour le frontend. Projet à venir, il sera détaillé ultérieurement.',
+        status: 'upcoming',
+        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
     ],
@@ -151,14 +150,14 @@ const translations: Translations = {
       },
       {
         title: 'Custom Forms',
-        description: 'Using Java, Lanterna framework and MVC architecture, I built an application who works as a form with questions/answers. Owner of the questions and users who respond to it (checkbox with one or multiple responses, percentages of the most picked response, response input space). This project was more about managing Git and Trello (creating branches for each feature, comitting, merging, deleting, tagging a commit, versioning, ...)',
+        description: 'Using Java, the Lanterna framework and MVC architecture, I built an application that works as a question/answer form. It handles question owners and responding users (single- or multiple-choice checkboxes, percentage of the most picked answer, free-text input). This project focused more on managing Git and Trello (creating a branch for each feature, committing, merging, deleting, tagging commits, versioning, etc.).',
         status: 'completed',
         tech: ['Java', 'Lanterna', 'Git'],
         link: "https://github.com/ALUMNOAT/tgpr-2425-a04"
       },
       {
         title: 'E-commerce website (Web Development)',
-        description: 'Using PHP as backend, school framework, MVC architecture, MySQL as database, I built an e-commerce website with option to bid/buy (used TRANSACTION), search bar for items, filter by name of buyer/item category, ... Used AJAX requests, JavaScript and Post-Redirect-Get design pattern.',
+        description: 'Using PHP (school framework, MVC architecture) and MySQL, I built an e-commerce website with bidding and instant purchase (using transactions), an item search bar, and filters by seller name and item category. Used AJAX requests, JavaScript and the Post-Redirect-Get design pattern.',
         status: 'completed',
         tech: ['PHP', 'LAMP stack', 'Git', 'JavaScript'],
         link: "https://github.com/ALUMNOAT/prwb_2526_d01"
@@ -185,9 +184,9 @@ const translations: Translations = {
       },
       {
         title: 'CRUD Application (Development Integration Project) (roadmap)',
-        description: 'Creating a theater ticket booking website using Spring Boot as backend and Angular.js as frontend. Project not started yet, so it will be detailed later.',
-        status: 'in-progress',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
+        description: 'Designing a theater ticket booking website with Spring Boot as backend and Angular as frontend. Upcoming project, it will be detailed later.',
+        status: 'upcoming',
+        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
     ],
@@ -235,9 +234,9 @@ const translations: Translations = {
       },
       {
         title: 'CRUD-applicatie (Ontwikkelingsintegratieproject) (roadmap)',
-        description: 'Het bouwen van een website voor het boeken van theatertickets met Spring Boot als backend en Angular.js als frontend. Nog niet gestart, wordt later gedetailleerd.',
-        status: 'in-progress',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
+        description: 'Het ontwerpen van een website voor het boeken van theatertickets met Spring Boot als backend en Angular als frontend. Komend project, wordt later gedetailleerd.',
+        status: 'upcoming',
+        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
     ],
@@ -285,9 +284,9 @@ const translations: Translations = {
       },
       {
         title: 'Aplikacja CRUD (Projekt Integracji Rozwoju) (roadmap)',
-        description: 'Tworzenie strony internetowej do rezerwacji biletów do teatru przy użyciu Spring Boot jako backendu i Angular.js jako frontend. Projekt jeszcze się nie zaczął, więc zostanie szczegółowo opisany później.',
-        status: 'in-progress',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular.js'],
+        description: 'Projektowanie strony internetowej do rezerwacji biletów do teatru z użyciem Spring Boot (backend) i Angular (frontend). Nadchodzący projekt, zostanie szczegółowo opisany później.',
+        status: 'upcoming',
+        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular'],
         link: "https://github.com/ALUMNOAT/reservationsSpringBoot"
       },
     ],
@@ -300,34 +299,34 @@ const translations: Translations = {
   parcoursList: {
     fr: [
       { year: '2007-2012', title: '2e-6e année primaire', subtitle: 'École fondamentale communale n° 10' },
-      { year: '2012-2018', title: '1ere-6eme secondaire général - Profil Math-Sciences', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Classe en immersion néerlandophone. 6 heures de mathématiques, 4 heures de néerlandais, 6 heures de sciences.' },
+      { year: '2012-2018', title: '1re-6e secondaire général - Profil Math-Sciences', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Classe en immersion néerlandophone. 6 heures de mathématiques, 4 heures de néerlandais, 6 heures de sciences.' },
       { year: '2018-2019', title: '7e année préparatoire en mathématiques', subtitle: 'Institut St-Louis', description: 'Une année de préparation intensive en mathématiques pour réussir l’examen d’admission en ingénieur civil. Réussi !' },
-      { year: '2019-2022', title: 'Bachelier en Sciences de l’Ingénieur', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Non réussi.' },
-      { year: '2022-2023', title: 'Bachelier en Sciences Informatiques', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Non réussi.' },
+      { year: '2019-2022', title: 'Bachelier en Sciences de l’Ingénieur', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Non abouti.' },
+      { year: '2022-2023', title: 'Bachelier en Sciences Informatiques', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Non abouti.' },
       { year: '2023 - Présent', title: 'Bachelier en Informatique - Développement des Applications', subtitle: 'EPFC (2023-2026), ICC (2026-2027)' },
     ],
     en: [
       { year: '2007-2012', title: 'Primary School (2nd-6th grade)', subtitle: 'École fondamentale communale n° 10' },
       { year: '2012-2018', title: 'High School - Math & Science Profile', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Dutch immersion class. 6h Math, 4h Dutch, 6h Science.' },
       { year: '2018-2019', title: '7th Year Math Preparatory Year', subtitle: 'Institut St-Louis', description: 'A preparatory year in mathematics to pass the civil engineering entrance exam. Passed!' },
-      { year: '2019-2022', title: 'Bachelor in Civil Engineering', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Not passed.' },
-      { year: '2022-2023', title: 'Bachelor in Computer Science', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Not passed.' },
+      { year: '2019-2022', title: 'Bachelor in Civil Engineering', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Not completed.' },
+      { year: '2022-2023', title: 'Bachelor in Computer Science', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Not completed.' },
       { year: '2023 - Present', title: 'Bachelor in IT - Application Development', subtitle: 'EPFC (2023-2026), ICC (2026-2027)' },
     ],
     nl: [
       { year: '2007-2012', title: 'Lagere School (2e-6e leerjaar)', subtitle: 'École fondamentale communale n° 10' },
       { year: '2012-2018', title: 'Secundair Onderwijs - Wiskunde-Wetenschappen', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Nederlandstalige immersieklas. 6u Wiskunde, 4u Nederlands, 6u Wetenschappen.' },
       { year: '2018-2019', title: '7de Jaar Voorbereidend Jaar Wiskunde', subtitle: 'Institut St-Louis', description: 'Een voorbereidend jaar wiskunde om het toelatingsexamen burgerlijk ingenieur te halen. Geslaagd!' },
-      { year: '2019-2022', title: 'Bachelor in de Burgerlijk Ingenieurswetenschappen', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Niet geslaagd.' },
-      { year: '2022-2023', title: 'Bachelor in de Informatica', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Niet geslaagd.' },
+      { year: '2019-2022', title: 'Bachelor in de burgerlijk ingenieurswetenschappen', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Niet afgerond.' },
+      { year: '2022-2023', title: 'Bachelor in de Informatica', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Niet afgerond.' },
       { year: '2023 - Heden', title: 'Bachelor in de Informatica - Applicatieontwikkeling', subtitle: 'EPFC (2023-2026), ICC (2026-2027)' },
     ],
     pl: [
       { year: '2007-2012', title: 'Szkoła podstawowa (klasy 2-6)', subtitle: 'École fondamentale communale n° 10' },
       { year: '2012-2018', title: 'Liceum - Profil Matematyczno-Przyrodniczy', subtitle: 'Collège Roi Baudouin (CRB)', description: 'Klasa z immersją niderlandzką. 6h matematyki, 4h niderlandzkiego, 6h nauk ścisłych.' },
       { year: '2018-2019', title: '7. Rok przygotowawczy z matematyki', subtitle: 'Institut St-Louis', description: 'Rok przygotowujący z matematyki do egzaminu wstępnego na studia inżynierskie. Zaliczone!' },
-      { year: '2019-2022', title: 'Studia Inżynierskie (Civil Engineering)', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Niezaliczone.' },
-      { year: '2022-2023', title: 'Informatyka (Licencjat)', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Niezaliczone.' },
+      { year: '2019-2022', title: 'Studia Inżynierskie (Licencjat)', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Nieukończone.' },
+      { year: '2022-2023', title: 'Informatyka (Licencjat)', subtitle: 'Université Libre de Bruxelles (ULB)', description: 'Nieukończone.' },
       { year: '2023 - Obecnie', title: 'Informatyka - Tworzenie Aplikacji', subtitle: 'EPFC (2023-2026), ICC (2026-2027)' },
     ],
   },
@@ -352,7 +351,7 @@ const translations: Translations = {
     fr: [
       {
         role: 'Assistant Administratif & Support Opérationnel',
-        company: '(Aide Familiale)',
+        company: '(Entreprise Familiale)',
         period: '2020 - 2023',
         location: 'Bruxelles, Belgique',
         bullets: [
@@ -368,7 +367,7 @@ const translations: Translations = {
         location: 'Bruxelles, Belgique',
         description: 'Job étudiant',
         bullets: [
-          'Organisation logistique et accueil : gérer les mouvements, assurer le rôle de coureur et vendre des billets lors d’événements grand public (Exposition Schtroumpf Expérience au Heysel).',
+          'Organisation logistique et accueil : gérer les mouvements, assurer des allers-retours logistiques sur site et vendre des billets lors d’événements grand public (Exposition Schtroumpf Expérience au Heysel).',
           'Support institutionnel : Assistance logistique lors d\'événements à l\'Hôtel de Ville de Bruxelles.',
           'Communication de terrain : Distribution et promotion lors de campagnes événementielles.'
         ],
@@ -377,7 +376,7 @@ const translations: Translations = {
     en: [
       {
         role: 'Administrative Assistant & Operational Support',
-        company: '(Family Help / Family Business)',
+        company: '(Family business)',
         period: '2020 - 2023',
         location: 'Brussels, Belgium',
         bullets: [
@@ -393,7 +392,7 @@ const translations: Translations = {
         location: 'Brussels, Belgium',
         description: 'Student job',
         bullets: [
-          'Logistics & Reception: Flow management, runner role, and sales at large public events (Smurf Experience Exhibition at Heysel).',
+          'Logistics & Reception: Flow management, on-site logistics runs, and sales at large public events (Smurf Experience Exhibition at Heysel).',
           'Institutional support: Logistics assistance during events at Brussels City Hall.',
           'Field communication: Distribution and promotion during event campaigns.'
         ],
@@ -402,11 +401,11 @@ const translations: Translations = {
     nl: [
       {
         role: 'Administratief Assistent & Operationele Ondersteuning',
-        company: '(Familiehulp)',
+        company: '(Familiebedrijf)',
         period: '2020 - 2023',
         location: 'Brussel, België',
         bullets: [
-          'Administratief beheer: Voorbereiding en opvolging van bedrijfsfacturen, klassement en ondersteuning bij de boekhouding.',
+          'Administratief beheer: Voorbereiding en opvolging van bedrijfsfacturen, archivering en ondersteuning bij de boekhouding.',
           'Taalkundige ondersteuning: Vertaling van professionele documenten en communicatieondersteuning.',
           'Renovatie & Bouw: Afwerkingswerkzaamheden (schilderen, afwerking) die nauwkeurigheid, fysieke inzet en oog voor detail vereisen.'
         ],
@@ -418,7 +417,7 @@ const translations: Translations = {
         location: 'Brussel, België',
         description: 'Studentenjob',
         bullets: [
-          'Logistiek & Onthaal: Beheer van bezoekersstromen, rol als runner en verkoop tijdens grootschalige evenementen (Smurf Experience-tentoonstelling op de Heizel).',
+          'Logistiek & Onthaal: Beheer van bezoekersstromen, logistieke ritten ter plaatse en verkoop tijdens grootschalige evenementen (Smurf Experience-tentoonstelling op de Heizel).',
           'Institutionele ondersteuning: Logistieke bijstand tijdens evenementen in het Stadhuis van Brussel.',
           'Veldcommunicatie: Distributie en promotie tijdens evenementencampagnes.'
         ],
@@ -427,7 +426,7 @@ const translations: Translations = {
     pl: [
       {
         role: 'Asystent Administracyjny i Wsparcie Operacyjne',
-        company: '(Pomoc Rodzinna)',
+        company: '(Firma rodzinna)',
         period: '2020 - 2023',
         location: 'Bruksela, Belgia',
         bullets: [
@@ -443,7 +442,7 @@ const translations: Translations = {
         location: 'Bruksela, Belgia',
         description: 'Praca studencka',
         bullets: [
-          'Logistyka i Obsługa Klienta: Zarządzanie przepływem ludzi, rola runnera oraz sprzedaż podczas wydarzeń masowych (Wystawa Smurf Experience na Heysel).',
+          'Logistyka i Obsługa Klienta: Zarządzanie przepływem ludzi, bieżąca logistyka na miejscu oraz sprzedaż podczas wydarzeń masowych (Wystawa Smurf Experience na Heysel).',
           'Wsparcie instytucjonalne: Pomoc logistyczna podczas wydarzeń w Ratuszu w Brukseli.',
           'Komunikacja w terenie: Dystrybucja materiałów i promocja podczas kampanii eventowych.'
         ],
